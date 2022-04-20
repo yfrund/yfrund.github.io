@@ -121,6 +121,7 @@ author:
 # Site Footer
 footer:
   links:
+      url: "https://github.com/yfrund"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/yfrund
