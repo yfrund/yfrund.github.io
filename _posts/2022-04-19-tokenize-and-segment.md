@@ -1,3 +1,6 @@
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/word.jpg)
+
+
 Got a txt file that needs to be  
 - segmented into sentences
 - tokenized
