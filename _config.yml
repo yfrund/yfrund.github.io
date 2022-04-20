@@ -110,23 +110,23 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:yuliia.frund@uzh.ch"
+      url: "mailto:yuliia.frund@uzh.ch"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/yfrund"
-    - label: "GItLab"
+      url: "https://github.com/yfrund"
+    - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
-      # url: "https://gitlab.uzh.ch/yuliia.frund"
+      url: "https://gitlab.uzh.ch/yuliia.frund"
 
 # Site Footer
 footer:
   links:
-      # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/yfrund
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
+      url: "https://gitlab.uzh.ch/yuliia.frund"
 
 
 # Reading Files
