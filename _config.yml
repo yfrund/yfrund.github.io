@@ -1,3 +1,4 @@
+
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your entire site, values
@@ -119,15 +120,15 @@ author:
       url: "https://gitlab.uzh.ch/yuliia.frund"
 
 # Site Footer
-footer:
-  links:
-      url: "https://github.com/yfrund"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/yfrund
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      url: "https://gitlab.uzh.ch/yuliia.frund"
+#footer:
+ # links:
+  #    url: "https://github.com/yfrund"
+   # - label: "GitHub"
+    #  icon: "fab fa-fw fa-github"
+     # url: "https://github.com/yfrund
+   # - label: "GitLab"
+   #   icon: "fab fa-fw fa-gitlab"
+   #   url: "https://gitlab.uzh.ch/yuliia.frund"
 
 
 # Reading Files
