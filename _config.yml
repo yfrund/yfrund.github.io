@@ -105,9 +105,9 @@ analytics:
 author:
   name             : "Yuliia"
   avatar           : "/assets/images/photo.jpg"
-  bio              : "A teacher with a love for linguistics and a passion for programming."
+  bio              : "A teacher with a love for linguistics and a passion for programming"
   location         : "CH"
-  email            : "Email"
+  email            : 
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
