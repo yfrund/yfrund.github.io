@@ -17,9 +17,9 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Yuliia F"
+title                    : 
 title_separator          : "-"
-subtitle                 : "Your text processing specialist"
+subtitle                 : 
 
 description              : "The answer to all your text-related questions"
 url                      : "https://yfrund.github.io"
