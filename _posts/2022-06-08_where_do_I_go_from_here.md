@@ -1,3 +1,0 @@
-![alt]({{ site.url }}{{ site.baseurl }}/assets/images/zurich.jpg)
-
-Are you completely lost at the Zürich main station and have no idea where to go from there? Grossmunster or Kunstahus? Or, perhaps, Sprüngli? Tough choices in life. One piece of advice I can give you is to give yourself enough time to recover from all the chocolate you're going to eat! And in the meantime my little [program]() will help you plan your day: just type in two destinations, and it will tell you how far they are from you and whether they're open today! Have fun and remember: there's no such thing as too much chocolate!
