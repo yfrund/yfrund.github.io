@@ -175,6 +175,7 @@ highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
+strip_html: true
 
 
 # Markdown Processing
