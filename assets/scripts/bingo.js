@@ -39,3 +39,9 @@ function randomGenerate(inp) {
     }
   });
 }
+
+const output = document.getElementsByClassName("printOutput");
+
+const userInput = document.getElementById("inputData");
+
+randomGenerate(userInput)
