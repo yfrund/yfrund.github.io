@@ -36,7 +36,7 @@ function generateItem() {
 }
 
 
-function handleInput(){
+function handleInput(output){
   if (parsed.length === 0 && original.length === 0) {
       const userInput = document.getElementById("inputData").value;
       parsed = parseText(userInput);
@@ -52,7 +52,7 @@ function handleInput(){
 }
 
 
-function handleRandomItem(parsed, original, output) {
+function handleRandomItem(output) {
   if (parsed.length === 0) {
 
     if (confirm("All items have been used. Do you want to restart?")) {
