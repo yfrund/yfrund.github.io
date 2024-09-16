@@ -59,6 +59,7 @@ function handleRandomItem(output) {
       parsed.push(...original);
     } else {
       parsed = [];
+      original = [];
     }
   }
 
