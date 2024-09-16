@@ -11,7 +11,7 @@ function parseText(text) {
     return Array.from({length: end - start + 1}, (v,i) => start + i);
   } else {
 
-    return text.split('@@');
+    return text.split('\n').map(item => item.trim()).filter(item => item.length > 0);
   }
 }
 
@@ -27,14 +27,13 @@ function generateItem() {
   });
 
 
-  //handle enter
+  //handle enter TODO: remove or add handling with multiline input
   document.getElementById("inputData").addEventListener("keydown", (e) => {
     if (e.key === 'Enter') {
       handleInput(output)
     }
   });
 }
-
 
 function handleInput(output){
   if (parsed.length === 0 && original.length === 0) {
