@@ -8,13 +8,10 @@ function parseText(text) {
     const start = parseInt(match[1]);
     const end = parseInt(match[2]);
 
-    const nums = Array.from({length: end - start + 1}, (v,i) => start + i);
-
-    return nums;
+    return Array.from({length: end - start + 1}, (v,i) => start + i);
   } else {
-
-    const strings = text.split('@@');
-    return strings;
+    
+    return text.split('@@');
   }
 }
 
@@ -52,8 +49,10 @@ function handleRandomItem(parsed, original, output) {
     }
   }
 
-  const randomItem = randomGenerate(parsed);
-  output.textContent = randomItem;
+  const randomIndex = Math.floor(Math.random() * parsed.length);
+
+
+  output.textContent = parsed.splice(randomIndex, 1)[0];
 }
 
 generateItem();
