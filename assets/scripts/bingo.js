@@ -15,38 +15,40 @@ function parseText(text) {
   }
 }
 
+let parsed = [];
+let original = [];
+
 function generateItem() {
   const output = document.querySelector(".printOutput");
 
   //handle button clicks
   document.getElementById("generateButton").addEventListener("click", () => {
-    const userInput = document.getElementById("inputData").value;
-    let parsed = parseText(userInput);
-    const original = [...parsed];
-
-    if (parsed.length === 0) {
-      output.textContent = "No valid items to select.";
-      return;
-    }
-
-    handleRandomItem(parsed, original, output);
+    handleInput(output);
   });
+
 
   //handle enter
   document.getElementById("inputData").addEventListener("keydown", (e) => {
     if (e.key === 'Enter') {
+      handleInput(output)
+    }
+  });
+}
+
+
+function handleInput(){
+  if (parsed.length === 0 && original.length === 0) {
       const userInput = document.getElementById("inputData").value;
-      let parsed = parseText(userInput);
-      const original = [...parsed];
+      parsed = parseText(userInput);
+      original = [...parsed];
 
       if (parsed.length === 0) {
         output.textContent = "No valid items to select.";
         return;
       }
-
-      handleRandomItem(parsed, original, output);
     }
-  });
+
+    handleRandomItem(output);
 }
 
 
