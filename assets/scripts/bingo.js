@@ -19,29 +19,33 @@ function parseText(text) {
 }
 
 function randomGenerate(inp) {
-  let parsed = parseText(inp);
-  const original = [...parsed]
+  if (parsed.length === 0) {
+    return "No items to select from.";
+  }
 
-  console.log("Press Enter to print a random item. Press Esc to exit.");
+  const randomIndex = Math.floor(Math.random() * parsed.length);
+  const randomItem = parsed.splice(randomIndex, 1)[0];
 
-  process.stdin.on("keypress", (str, key) => {
-    if (key.name === "escape") {
-      console.log("\nExiting");
-      process.exit();
-    } else if (key.name === "return") {
-      if (!parsed.length) {
-        parsed = [...original];
-        console.log("All items have been used - starting over.");
-      }
-      const randomIndex = Math.floor(Math.random() * parsed.length);
-      const randomItem = parsed.splice(randomIndex, 1)[0];
-      console.log(randomItem);
-    }
-  });
+  return randomItem;
 }
 
-const output = document.getElementsByClassName("printOutput");
 
-const userInput = document.getElementById("inputData");
+document.getElementById("generateBtn").addEventListener("click", () => {
+  const userInput = document.getElementById("inputData").value;
+  let parsed = parseText(userInput); // Parse the input
+  const original = [...parsed];
 
-randomGenerate(userInput)
+  if (parsed.length === 0) {
+    parsed = [...original];
+  }
+
+  const output = document.querySelector(".printOutput");
+
+
+  if (parsed.length > 0) {
+    const randomItem = randomGenerate(parsed);
+    output.textContent = randomItem;
+  } else {
+    output.textContent = "No valid items to select.";
+  }
+});
