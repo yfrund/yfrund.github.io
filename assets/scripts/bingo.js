@@ -10,29 +10,40 @@ function parseText(text) {
 
     return Array.from({length: end - start + 1}, (v,i) => start + i);
   } else {
-    
+
     return text.split('@@');
   }
 }
 
 function generateItem() {
-  const userInput = document.getElementById("inputData").value;
-  let parsed = parseText(userInput);
-  const original = [...parsed];
-
   const output = document.querySelector(".printOutput");
 
-  if (parsed.length === 0) {
-    output.textContent = "No valid items to select.";
-    return;
-  }
+  //handle button clicks
+  document.getElementById("generateButton").addEventListener("click", () => {
+    const userInput = document.getElementById("inputData").value;
+    let parsed = parseText(userInput);
+    const original = [...parsed];
 
-  //for mouse clicks on the button
-  document.getElementById("generateButton").addEventListener("click", () => handleRandomItem(parsed, original, output));
+    if (parsed.length === 0) {
+      output.textContent = "No valid items to select.";
+      return;
+    }
 
-  //for enter
+    handleRandomItem(parsed, original, output);
+  });
+
+  //handle enter
   document.getElementById("inputData").addEventListener("keydown", (e) => {
     if (e.key === 'Enter') {
+      const userInput = document.getElementById("inputData").value;
+      let parsed = parseText(userInput);
+      const original = [...parsed];
+
+      if (parsed.length === 0) {
+        output.textContent = "No valid items to select.";
+        return;
+      }
+
       handleRandomItem(parsed, original, output);
     }
   });
