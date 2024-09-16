@@ -30,7 +30,7 @@ function randomGenerate(inp) {
 }
 
 
-document.getElementById("generateBtn").addEventListener("click", () => {
+document.getElementById("generateButton").addEventListener("click", () => {
   const userInput = document.getElementById("inputData").value;
   let parsed = parseText(userInput); // Parse the input
   const original = [...parsed];
