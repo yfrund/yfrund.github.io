@@ -18,34 +18,43 @@ function parseText(text) {
   }
 }
 
-function randomGenerate(parsed) {
-  if (parsed.length === 0) {
-    return "No items to select from.";
-  }
-
-  const randomIndex = Math.floor(Math.random() * parsed.length);
-  const randomItem = parsed.splice(randomIndex, 1)[0];
-
-  return randomItem;
-}
-
-
-document.getElementById("generateButton").addEventListener("click", () => {
+function generateItem() {
   const userInput = document.getElementById("inputData").value;
-  let parsed = parseText(userInput); // Parse the input
+  let parsed = parseText(userInput);
   const original = [...parsed];
-
-  if (parsed.length === 0) {
-    parsed = [...original];
-  }
 
   const output = document.querySelector(".printOutput");
 
-
-  if (parsed.length > 0) {
-    const randomItem = randomGenerate(parsed);
-    output.textContent = randomItem;
-  } else {
+  if (parsed.length === 0) {
     output.textContent = "No valid items to select.";
+    return;
   }
-});
+
+  //for mouse clicks on the button
+  document.getElementById("generateButton").addEventListener("click", () => handleRandomItem(parsed, original, output));
+
+  //for enter
+  document.getElementById("inputData").addEventListener("keydown", (e) => {
+    if (e.key === 'Enter') {
+      handleRandomItem(parsed, original, output);
+    }
+  });
+}
+
+
+function handleRandomItem(parsed, original, output) {
+  if (parsed.length === 0) {
+
+    if (confirm("All items have been used. Do you want to restart?")) {
+      parsed.push(...original);
+    } else {
+      return;
+    }
+  }
+
+  const randomItem = randomGenerate(parsed);
+  output.textContent = randomItem;
+}
+
+generateItem();
+
