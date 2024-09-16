@@ -58,7 +58,7 @@ function handleRandomItem(output) {
     if (confirm("All items have been used. Do you want to restart?")) {
       parsed.push(...original);
     } else {
-      return;
+      parsed = [];
     }
   }
 
