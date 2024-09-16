@@ -18,7 +18,7 @@ function parseText(text) {
   }
 }
 
-function randomGenerate(inp) {
+function randomGenerate(parsed) {
   if (parsed.length === 0) {
     return "No items to select from.";
   }
