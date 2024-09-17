@@ -8,15 +8,18 @@ excerpt: "This is a simple generator of random strings or digits from a given li
   <meta charset="UTF-8">
   <title>Random Generator</title>
   <script src="../assets/scripts/bingo.js" defer></script>
+
 </head>
 <body>
 <p>This is a simple generator of random strings or digits from a given list.</p>
 
-<p>Enter a list of strings or a set of numbers in the field below.</p>
+<p>Enter a list of strings separated by new lines or a range of numbers (e.g. 1-12) in the field below.</p>
 <div class="inputData">
   <textarea id="inputData" placeholder="Type here" rows="10" cols="30"></textarea>
   <button id="generateButton">Generate!</button>
+  <button id="clearInput">Clear</button>
 </div>
+
 
 <div class="output">
   <p>Task: </p>
