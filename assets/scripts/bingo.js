@@ -35,7 +35,12 @@ function generateItem() {
 
 //  clear input
   document.getElementById("clearInput").addEventListener("click", () => {
-    document.getElementById("inputData").value = ""
+    document.getElementById("inputData").value = "";
+
+    parsed = [];
+    original = [];
+
+    document.querySelector(".printOutput").textContent = "";
   })
 }
 
