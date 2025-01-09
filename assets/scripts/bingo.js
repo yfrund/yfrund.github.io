@@ -63,6 +63,7 @@ function handleRandomItem(output) {
     } else {
       parsed = [];
       original = [];
+      document.getElementById("inputData").value = "";
 
     }
   }
